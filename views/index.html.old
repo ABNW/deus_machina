@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+  <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+<body class="">
+  <nav class="nav">
+    <a href="./">
+      <div class="logo-container">
+        <div class="img-wrapper">
+          <img src="./assets/img/logo.png" alt="">
+        </div>
+        <span class="text">Deus<br>Machina</span>
+      </div>
+    </a>
+  </nav>
+  <main class="main">
+    <div class="page-title">
+      <div class="img-wrapper">
+        <img src="./assets/img/dot-text.jpg" alt="">
+      </div>
+      <div class="img-wrapper">
+        <img src="./assets/img/mock.png" alt="">
+      </div>
+      <h1 class="text text-5">Deus<br>Machina</h1>
+      <h1 class="text text-4">Deus<br>Machina</h1>
+      <h1 class="text text-3">Deus<br>Machina</h1>
+      <h1 class="text text-2">Deus<br>Machina</h1>
+      <h1 class="text text-1">Deus<br>Machina</h1>
+      <h1 class="text text-0">Deus<br>Machina</h1>
+    </div>
+  </main>
+  <section class="home-section">
+    
+  </section>
+</body>
+</html>

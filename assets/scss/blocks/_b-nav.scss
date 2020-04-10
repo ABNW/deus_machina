@@ -1,0 +1,43 @@
+.nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+  background-color: white;
+  border-bottom: 1px solid black;
+
+  a {
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  .text {
+    color: black;
+  }
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: row;
+  padding: 10px 20px;
+
+  .img-wrapper {
+    max-width: 50px;
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  .text {
+    font-family: 'Poppins';
+    font-weight: 800;
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 20px;
+    line-height: 0.8;
+    letter-spacing: -0.5px;
+    margin-left: 5px;
+  }
+}

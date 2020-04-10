@@ -1,0 +1,57 @@
+.form {
+    &__fieldset {
+    }
+
+    &__list {
+    }
+
+    &__element {
+
+
+        &--submit {
+
+        }
+
+        &-outer {
+
+        }
+
+        &-inner {
+
+            &--submit {
+            }
+        }
+    }
+
+    &__label {
+
+    }
+
+    &__input {
+
+    }
+
+    &__submit {
+
+    }
+
+    &-error {
+
+
+        &__text {
+
+        }
+
+        &__list {
+
+        }
+
+        &__item {
+
+        }
+    }
+
+    &-success {
+
+    }
+}

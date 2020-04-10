@@ -1,0 +1,26 @@
+//## Font Sizing
+// -------------------------
+
+@function em($pixels, $context: font-size(base)) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return $pixels / $context * 1em;
+}
+
+@function font-family($identifier: default) {
+  @if ($identifier == default) {
+    @return map-get($font-family, $identifier);
+  } @else {
+    @return unquote(map-get($font-family, $identifier) + ', ' + map-get($font-family, default));
+  }
+}
+
+@function font-size($identifier: base) {
+  @return map-get($font-size, $identifier);
+}

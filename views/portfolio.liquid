@@ -1,0 +1,10 @@
+---
+layout: base.liquid
+title: Portfolio
+---
+<h1>This is the portfolio page</h1>
+
+{% for preview in collections.portfolio %}
+    <h2><a href="{{ preview.url }}">{{ preview.data.project_title }}</a></h2>
+    <p>{{preview.data.project_blurb}}</p>
+{% endfor %}

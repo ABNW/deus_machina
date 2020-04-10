@@ -1,0 +1,23 @@
+html {
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+body {
+    min-height: 100vh;
+}
+
+* {
+    &, &:before, &:after {
+        box-sizing: inherit;
+    }
+    &:focus {
+        outline: none;
+    }
+    &:first-child {
+        margin-top: 0;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+}

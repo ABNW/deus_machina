@@ -1,0 +1,21 @@
+@function vw($pixels, $context: 1024) {
+    @if (unitless($pixels)) {
+        $pixels: $pixels * 1px;
+    }
+
+    @if type-of($context) == 'number' and not unitless($context) {
+        $context: $context / ($context * 0 + 1);
+    }
+
+    $vw: ($context * 0.01) * 1px;
+
+    @return ($pixels / $vw) * 1vw;
+}
+
+@function layout-container-size($name) {
+    @return map-get($layoutContainerMaxWidths, $name);
+}
+
+@function layout-spacing($identifier: base) {
+    @return map-get($layoutSpacing, $identifier);
+}
