@@ -3,6 +3,10 @@ layout: blog.liquid
 title: Blog
 ---
 {% for blog in collections.blog %}
-    <h2><a href="{{ blog.url }}">{{ blog.data.pageTitle }}</a></h2>
-    <em>{{ blog.date | date: "%Y-%m-%d" }}</em>
+    <div class="blog">
+        <section class="blog__item">
+            <h2><a href="{{ blog.url }}">{{ blog.data.pageTitle }}</a></h2>
+            <em>{{ blog.date | date: "%Y-%m-%d" }}</em>
+        </section>
+    </div>
 {% endfor %}

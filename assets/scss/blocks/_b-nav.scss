@@ -6,6 +6,8 @@
   z-index: 3;
   background-color: white;
   border-bottom: 1px solid black;
+  display: flex;
+  justify-content: space-between;
 
   a {
     text-decoration: none;
@@ -14,6 +16,52 @@
   
   .text {
     color: black;
+  }
+
+  &-items { 
+    display: flex;
+    flex-direction: row;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-right: 40px;
+    padding-top: 8px;
+  }
+
+  &__item {
+    display: inline-block;
+
+    a {
+      color: palette(default, black);
+      font-weight: 800;
+      font-family: 'Poppins';
+      font-size: 18px;
+      position: relative;
+      overflow: hidden;
+      line-height: 1.5;
+
+      &:after {
+        content: '';
+        display: block;
+        height: 4px;
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-100%, -50%);
+        background-color: palette(default, black);
+        transition: transform 0.4s ease;
+      }
+
+      &:hover {
+
+        &:after {
+          transform: translate(0, -50%);
+        }
+      }
+    }
+
+    & + & {
+      margin-left: 15px;
+    }
   }
 }
 

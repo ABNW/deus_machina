@@ -1,12 +1,15 @@
-const docElm = document.documentElement;
+const docElm = document.documentElement
 const {
   clientWidth,
   clientHeight
-} = docElm;
+} = docElm
+
+
+var miles = "miles";
 
 // Stream of all mousemove events
 const mouseMove$ = Rx.Observable
-  .fromEvent(docElm, 'mousemove')
+  .fromEvent(docElm, "mousemove")
   .map(event => ({
     x: event.clientX,
     y: event.clientY
@@ -14,11 +17,11 @@ const mouseMove$ = Rx.Observable
 
 // Stream of all touchmove events
 const touchMove$ = Rx.Observable
-  .fromEvent(docElm, 'touchmove')
+  .fromEvent(docElm, "touchmove")
   .map(event => ({
     x: event.touches[0].clientX,
     y: event.touches[0].clientY
-  }));
+  }))
 
 // Combination of mousemove and touchmove streams
 const move$ = Rx.Observable
@@ -39,14 +42,14 @@ function lerp(start, end) {
   };
 }
 
-const classNames = ['st0', 'st1', 'st2', 'st3', 'st4'];
-const ids = ['project-left-1', 'project-right-1', 'project-left-2', 'project-right-2'];
+const classNames = ["st0", "st1", "st2", "st3", "st4"];
+const ids = ["project-left-1", "project-right-2"];
 let sets = [[]];
 const dampeners = [0.01, 0.015, 0.01, 0.02, 0.01];   
 
 document.onreadystatechange = function () {
   
-  if (document.readyState == 'interactive') { 
+  if (document.readyState == "interactive") { 
     
     let count = 0;
     
@@ -68,16 +71,16 @@ document.onreadystatechange = function () {
 
     smoothMove$.subscribe(pos => {
 
-      for (let set of sets) {
-        for (let [index, value] of set.entries() ) {
-          for (let triangle of value) {
-            let x = pos.x * (index == 4 ? -dampeners[index] : dampeners[index]);
-            let y = pos.y * (index == 4 ? -dampeners[index] : dampeners[index]);
-            const rotX = (pos.y / clientHeight * -50) + 25;
-            const rotY = (pos.x / clientWidth * 50) - 25;
-            triangle.setAttribute('transform', `translate(${x}, ${y})`);
+      for (const set of sets) {
+        for (const [index, value] of set.entries() ) {
+          for (const triangle of value) {
+            const x = pos.x * (index == 4 ? -dampeners[index] : dampeners[index]);
+            const y = pos.y * (index == 4 ? -dampeners[index] : dampeners[index]);
+            // const rotX = (pos.y / clientHeight * -50) + 25;
+            // const rotY = (pos.x / clientWidth * 50) - 25;
+            triangle.setAttribute("transform", `translate(${x}, ${y})`);
           }
-        } 
+        }
       }
     });
   }

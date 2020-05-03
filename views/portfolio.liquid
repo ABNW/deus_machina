@@ -1,10 +1,8 @@
 ---
 layout: base.liquid
-title: Portfolio
+pageTitle: Portfolio
 ---
-<h1>This is the portfolio page</h1>
-
+{% include molecules/page-header %}
 {% for preview in collections.portfolio %}
-    <h2><a href="{{ preview.url }}">{{ preview.data.project_title }}</a></h2>
-    <p>{{preview.data.project_blurb}}</p>
+    {% include molecules/project-teaser with preview forloop.index  %}
 {% endfor %}
