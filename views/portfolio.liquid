@@ -1,8 +1,7 @@
 ---
-layout: base.liquid
+layout: portfolio.liquid
 pageTitle: Portfolio
 ---
-{% include molecules/page-header %}
 {% for preview in collections.portfolio %}
     {% include molecules/project-teaser with preview forloop.index  %}
 {% endfor %}

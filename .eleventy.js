@@ -2,11 +2,7 @@ module.exports = function(eleventyConfig) {
 
   //Filter for left or right based on odd even of number
   eleventyConfig.addLiquidFilter("leftORright", function(value){
-    if(value % 2) {
-      return 'left';
-    } else {
-      return 'right';
-    }
+    return value % 2 ? 'left' : 'right';
   });
 
   return  {

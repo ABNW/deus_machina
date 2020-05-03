@@ -5,8 +5,7 @@ const {
 } = docElm
 
 
-var miles = "miles";
-
+var miles = "miles23221312";
 // Stream of all mousemove events
 const mouseMove$ = Rx.Observable
   .fromEvent(docElm, "mousemove")
