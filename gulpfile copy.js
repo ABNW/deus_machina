@@ -10,6 +10,7 @@ const gulp                      = require('gulp'),
       concat                    = require('gulp-concat'),
       imagemin                  = require('gulp-imagemin'),
       dependents                = require('gulp-dependents'),
+      compiler                  = require('webpack'),
       webpack                   = require('webpack-stream'),
       src_folder                = './assets/',
       dist_folder               = './_site/',
@@ -39,15 +40,21 @@ gulp.task('images', () => {
 gulp.task('js', () => {
   return gulp.src([ src_folder + 'js/**/*.js' ], { since: gulp.lastRun('js') })
     .pipe(plumber())
-    .pipe(webpack())
+    .pipe(webpack({
+      watch: true,
+      // output: {
+      //   filename: 'something.js',
+      // },
+      // mode: 'development',
+    }))
     .pipe(sourcemaps.init())
-      .pipe(babel({
-        presets: [ '@babel/env' ]
-      }))
-      .pipe(concat('all.js'))
-      .pipe(uglify())
+    .pipe(babel({
+      presets: [ '@babel/env' ]
+    }))
+    .pipe(concat('all.js'))
+    // .pipe(uglify())
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest(dist_assets_folder + 'js'))
+    .pipe(gulp.dest(dist_assets_folder + 'js/'))
 });
 
 gulp.task('watch', () => {

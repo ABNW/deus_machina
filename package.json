@@ -36,6 +36,8 @@
     "gulp-sourcemaps": "^2.6.5",
     "gulp-stylus": "^2.7.0",
     "gulp-uglify": "^3.0.2",
+    "rxjs": "^6.5.5",
+    "webpack": "^4.43.0",
     "webpack-stream": "^5.2.1"
   },
   "dependencies": {

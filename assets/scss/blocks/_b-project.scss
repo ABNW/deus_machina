@@ -32,11 +32,12 @@
   margin-bottom: auto;
 
   svg {
-      // height: 32em;
+    height: 100%;
+    width: 100%;
 
-      image {
-        cursor: pointer;
-      }
+    image {
+      cursor: pointer;
+    }
   }
 }
 
