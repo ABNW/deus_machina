@@ -40,7 +40,7 @@ export class homepageTransition extends Highway.Transition {
   in({from, to, done}) {
     // Helpful Hint: 
     // To is the DOM Element -- From is the previous DOM Element
-    gsap.fromTo(to, 0.5,{opacity: 0},{opacity: 1, onComplete: done});
+    gsap.fromTo(to, 2.5,{opacity: 0},{opacity: 1, onComplete: done});
     done(from.remove());
     shaderCanvasSetup();
   }
