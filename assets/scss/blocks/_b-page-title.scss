@@ -74,20 +74,12 @@
 
     $count: 7;
 
-    // @for $i from 0 through $count {
-    //   .text-#{$i} {
-    //     transform: translateY(-5vh * $i);
-    //     opacity: 1;
-    //   }
-    // }
-
-    //   @for $i from 0 through $count {
-    //     .text-#{$i}.text--small{
-    //       transform: translateY(-2.5vh * $i);
-    //       opacity: 1;
-    //     }
-    //   }
-
+    @for $i from 0 through $count {
+      .text-#{$i} {
+        transform: translateY(-5vh * $i);
+        opacity: 1;
+      }
+    }
 
     .text-0 {
       color: black;

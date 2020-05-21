@@ -4,6 +4,8 @@ import * as THREE from 'three';
 var container;
 var camera, scene, renderer;
 var uniforms;
+var geometry, material, mesh;
+var animFrame;
 
 function init() {
     container = document.getElementById('container');
@@ -13,7 +15,7 @@ function init() {
 
     scene = new THREE.Scene();
 
-    var geometry = new THREE.PlaneBufferGeometry(2, 2);
+    geometry = new THREE.PlaneBufferGeometry(2, 2);
 
     uniforms = {
         u_time: {
@@ -30,13 +32,13 @@ function init() {
         }
     };
 
-    var material = new THREE.ShaderMaterial({
+    material = new THREE.ShaderMaterial({
         uniforms: uniforms,
         vertexShader: document.getElementById('vertexShader').textContent,
         fragmentShader: document.getElementById('fragmentShader').textContent
     });
 
-    var mesh = new THREE.Mesh(geometry, material);
+    mesh = new THREE.Mesh(geometry, material);
     scene.add(mesh);
 
     renderer = new THREE.WebGLRenderer();
@@ -61,7 +63,7 @@ function onWindowResize(event) {
 }
 
 function animate() {
-    requestAnimationFrame(animate);
+    animFrame = requestAnimationFrame(animate);
     render();
 }
 
@@ -70,8 +72,16 @@ function render() {
     renderer.render(scene, camera);
 }
 
-export const shaderCanvas = function() {
+export const shaderCanvasSetup = function() {
   console.log('Initting Canvas');
   init();
   animate();
 }
+
+export const shaderCanvasExit = function() {
+    scene.remove(mesh);
+    geometry.dispose();
+    material.dispose();
+    cancelAnimationFrame(animFrame);
+}
+
