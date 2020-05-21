@@ -37,6 +37,7 @@
     "gulp-stylus": "^2.7.0",
     "gulp-uglify": "^3.0.2",
     "rxjs": "^6.5.5",
+    "three": "^0.116.1",
     "webpack": "^4.43.0",
     "webpack-stream": "^5.2.1"
   },

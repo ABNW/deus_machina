@@ -1,15 +1,11 @@
 import * as Rx from 'rxjs';
-import { map, merge, withLatestFrom, scan } from 'rxjs/operators'
+import { map, merge, withLatestFrom, scan } from 'rxjs/operators';
 
 const docElm = document.documentElement
 const {
   clientWidth,
   clientHeight
 } = docElm;
-
-// console.log(Rx);
-// console.log('Rx.map');
-// console.log(map);
 
 let smoothMove$ = {};
 let smoother = {};
@@ -37,7 +33,6 @@ const move$ = mouseMove$.pipe(
 
 // Stream of requestAnimationFrame ticks
 const animationFrame$ = Rx.interval(0, Rx.animationFrameScheduler);
-
 
 function lerp(start, end) {
   const dx = end.x - start.x;
@@ -92,7 +87,5 @@ export const triangleShizzSetup = function () {
 };
 
 export const triangleShizzExit = function() {
-  console.log('triangleShizzExit unsubscribing');
   smoother = {};
-  console.log(smoother);
 }

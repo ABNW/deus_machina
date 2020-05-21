@@ -1,27 +1,28 @@
 html {
-    box-sizing: border-box;
-    overflow-x: hidden;
+  overflow-x: hidden;
+
+  box-sizing: border-box;
 }
 
 body {
-    min-height: 100vh;
+  min-height: 100vh;
 
-    &.is-loading {
-        cursor: wait;
-    }
+  &.is-loading {
+    cursor: wait;
+  }
 }
 
 * {
-    &, &:before, &:after {
-        box-sizing: inherit;
-    }
-    &:focus {
-        outline: none;
-    }
-    &:first-child {
-        margin-top: 0;
-    }
-    &:last-child {
-        margin-bottom: 0;
-    }
+  &, &:before, &:after {
+    box-sizing: inherit;
+  }
+  &:focus {
+    outline: none;
+  }
+  &:first-child {
+    margin-top: 0;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
 }

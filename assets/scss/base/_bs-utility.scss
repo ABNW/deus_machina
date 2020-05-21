@@ -1,31 +1,27 @@
 //== Resets
 //
 
-.reset-all,
-%reset-all{
+.reset-all, %reset-all {
   margin-top: 0;
   margin-bottom: 0;
 }
 
-.reset-top,
-%reset-top{
+.reset-top, %reset-top {
   margin-top: 0;
 }
 
-.reset-bottom,
-%reset-bottom{
+.reset-bottom, %reset-bottom {
   margin-bottom: 0;
 }
 
-.vc-absolute,
-%vc-absolute{
+.vc-absolute, %vc-absolute {
   position: absolute;
   top: 50%;
+
   transform: translateY(-50%);
 }
 
-.vc-relative,
-%vc-relative{
+.vc-relative, %vc-relative {
   position: relative;
   top: 50%;
 
@@ -33,25 +29,26 @@
 }
 
 .hc-absolute
-%hc-absolute{
+%hc-absolute {
   right: 0;
   left: 0;
 
-  margin: 0px auto;
+  margin: 0 auto;
 }
 
-.center-center,
-%center-center{
+.center-center, %center-center {
   position: absolute;
   top: 50%;
   left: 50%;
+
   transform: translate(-50%, -50%);
 }
 
-%clearfix{
+%clearfix {
   &:after {
-    content: "";
     display: table;
     clear: both;
+
+    content: "";
   }
 }

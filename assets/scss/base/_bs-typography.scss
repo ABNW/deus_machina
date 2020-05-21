@@ -5,18 +5,20 @@ html {
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeSpeed;
 }
 
 body {
-  font-family: font-family(body);
   margin: 0;
+
+  font-family: font-family(body);
 }
 
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: font-family(heading);
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   margin: 0;
-  font-family: 'Poppins';
+
+  font-family: font-family(heading);
+  font-family: "Poppins";
   font-weight: 800;
 }
 
@@ -49,5 +51,5 @@ p {
 }
 
 li {
-  font-size: font-size(li)
+  font-size: font-size(li);
 }

@@ -1,43 +1,54 @@
 .portfolio-block {
-  width: 100%;
-  margin: 0px auto;
-  background-color: #2d2d2d;
-  height: 500px;
   position: relative;
+
   overflow: hidden;
+
+  width: 100%;
+  height: 500px;
+  margin: 0 auto;
+
+  background-color: #2d2d2d;
 }
 
 .triangle-wrapper {
-  overflow: hidden;
-  height: 450px;
-  width: 450px;
   position: relative;
-  margin: 0 auto;
-  transform-origin: top left;
   top: 25px;
+
+  overflow: hidden;
+
+  width: 450px;
+  height: 450px;
+  margin: 0 auto;
+
+  transform-origin: top left;
 }
 
-.equilateral-triangle,
-.equilateral-triangle__img {
+.equilateral-triangle, .equilateral-triangle__img {
   width: 100%;
   height: 100%;
 }
 
 .equilateral-triangle {
-  /* 117 = 135 * 0.866 */
-  overflow: hidden;
   position: absolute;
+  /* 117 = 135 * 0.866 */
+
+  overflow: hidden;
+
   transform: skewX(-45deg);
   transform-origin: 100% 0;
   &:after {
-    height: 200px;
-    width: 200px;
-    content: '';
-    display: block;
     position: absolute;
     top: 0;
-    background-color: orange;
+
+    display: block;
+
+    width: 200px;
+    height: 200px;
+
+    content: "";
     transform: skew(45deg);
+
+    background-color: orange;
   }
 }
 
@@ -48,33 +59,30 @@
   }
 }
 
-.st0,
-.st1 {
+.st0, .st1 {
   fill: none;
-  stroke: #000;
-  stroke-miterlimit: 10
+  stroke: #000000;
+  stroke-miterlimit: 10;
 }
 
 .st1 {
-  fill: #f2f2f2
+  fill: #f2f2f2;
 }
 
 .st2 {
-  fill: #aaa
+  fill: #aaaaaa;
 }
 
-.st2,
-.st3,
-.st4 {
-  stroke: #000;
-  stroke-miterlimit: 10
+.st2, .st3, .st4 {
+  stroke: #000000;
+  stroke-miterlimit: 10;
 }
 
 .st4 {
-  stroke: #fff;
   fill: transparent;
+  stroke: #ffffff;
 }
 
 image {
-  margin: 0px auto;
+  margin: 0 auto;
 }
