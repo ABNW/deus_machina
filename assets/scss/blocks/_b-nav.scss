@@ -9,17 +9,13 @@
 
   width: 100%;
 
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid palette(default, black);
   background-color: white;
 
   a {
     display: inline-block;
 
     text-decoration: none;
-  }
-
-  .text {
-    color: black;
   }
 
   &-items {
@@ -39,8 +35,6 @@
       position: relative;
 
       overflow: hidden;
-
-      color: palette(default, black);
 
       font-family: "Poppins";
       font-size: 18px;

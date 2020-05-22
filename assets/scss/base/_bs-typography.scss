@@ -11,6 +11,8 @@ html {
 body {
   margin: 0;
 
+  color: palette(default, black);
+
   font-family: font-family(body);
 }
 
@@ -52,4 +54,8 @@ p {
 
 li {
   font-size: font-size(li);
+}
+
+a {
+  color: palette(default, black);
 }

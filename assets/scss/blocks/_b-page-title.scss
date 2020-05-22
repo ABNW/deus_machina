@@ -38,7 +38,7 @@
         top: auto;
         bottom: 0;
       }
-      -webkit-text-stroke: 2px black;
+      -webkit-text-stroke: 2px palette(default, black);
 
       &--small {
         right: 0;
@@ -82,7 +82,7 @@
     }
 
     .text-0 {
-      color: black;
+      color: palette(default, black);
     }
 
 
