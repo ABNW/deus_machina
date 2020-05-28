@@ -1,0 +1,45 @@
+.block {
+  position: relative;
+
+  .canvas {
+    .inner {
+      width: 50%;
+      padding-top: 65%;
+
+      background-color: grey;
+    }
+  }
+
+  & + & {
+    margin-top: 8rem;
+  }
+
+  .col {
+    position: relative;
+  }
+
+  &__title {
+    position: absolute;
+    top: 50%;
+    left: 42.5%;
+
+    transform: translateY(-50%);
+
+    font-size: 7.5vw;
+  }
+
+  &:nth-child(2n) {
+    .canvas {
+      .inner {
+        margin-left: auto;
+      }
+    }
+
+    .block__title {
+      right: 42.5%;
+      left: auto;
+
+      transform: translateY(-50%);
+    }
+  }
+}

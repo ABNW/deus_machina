@@ -7,6 +7,8 @@ html {
 body {
   min-height: 100vh;
 
+  background-color: palette(default, white);
+
   &.is-loading {
     cursor: wait;
   }

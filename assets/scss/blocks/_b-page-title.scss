@@ -32,7 +32,7 @@
 
       transition: transform .45s cubic-bezier(.770, .000, .175, 1.000);
 
-      color: white;
+      color: palette(default, white);
 
       @include media-breakpoint-up(sm) {
         top: auto;
@@ -97,11 +97,11 @@
       line-height: .85;
     }
 
-    &:hover {
-      .text {
-        transform: translateY(0);
-      }
-    }
+    // &:hover {
+    //   .text {
+    //     transform: translateY(0);
+    //   }
+    // }
 
     &--center {
       text-align: center;

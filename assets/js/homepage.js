@@ -8,7 +8,7 @@ var geometry, material, mesh;
 var animFrame;
 
 function init() {
-    container = document.getElementById('container');
+    container = document.getElementById('container1');
 
     camera = new THREE.Camera();
     camera.position.z = 1;
@@ -34,8 +34,8 @@ function init() {
 
     material = new THREE.ShaderMaterial({
         uniforms: uniforms,
-        vertexShader: document.getElementById('vertexShader').textContent,
-        fragmentShader: document.getElementById('fragmentShader').textContent
+        vertexShader: document.getElementById('vertexShader1').textContent,
+        fragmentShader: document.getElementById('fragmentShader1').textContent
     });
 
     mesh = new THREE.Mesh(geometry, material);
