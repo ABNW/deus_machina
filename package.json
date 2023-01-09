@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@11ty/eleventy": "^0.10.0",
+    "@11ty/eleventy": "^1.0.2",
     "@babel/core": "^7.8.7",
     "@babel/preset-env": "^7.8.7",
     "@dogstudio/highway": "^2.2.1",
